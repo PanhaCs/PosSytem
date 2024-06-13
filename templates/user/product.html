@@ -1,0 +1,20 @@
+{% include "master/index.html"  %}
+<div class="container mt-5">
+    
+    <div class="row">
+        {% for item in product_list %}
+            <div class="col-md-3  col-sm-6 mt-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="static/image/{{ item.image }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ item.title }}</h5>
+                        <p class="card-text">{{ item.description }}</p>
+                        <center><a target="_blank" href="/product_detail?id={{ item.id }}"  class="btn btn-primary ">More...</a></center>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        
+    </div>
+    
+</div>
